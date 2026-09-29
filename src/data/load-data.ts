@@ -40,6 +40,7 @@ import flink from "./platforms/oss/flink/flink.json";
 import pyiceberg from "./platforms/oss/pyiceberg/pyiceberg.json";
 import doris from "./platforms/oss/doris/doris.json";
 import databend from "./platforms/oss/databend/databend.json";
+import oracle26ai from "./platforms/oracle/oracle-26ai/oracle-26ai.json";
 // kafka-connect intentionally NOT imported (staged, excluded from app)
 
 export interface EngineFile {
@@ -55,7 +56,7 @@ const preSnowflakeEngines: EngineFile[] = [
   databricks,
 ];
 
-// Non-AWS engines after the Snowflake slot (oss).
+// Non-AWS engines after the Snowflake slot (oss / 3rd party).
 const postSnowflakeEngines: EngineFile[] = [
   duckdb,
   clickhouse,
@@ -67,6 +68,7 @@ const postSnowflakeEngines: EngineFile[] = [
   pyiceberg,
   doris,
   databend,
+  oracle26ai,
 ];
 
 const awsBucketsEngines: EngineFile[] = [bAthena, bEmr, bGlue, bManagedFlink, bRedshift];
